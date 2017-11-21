@@ -42,6 +42,13 @@ app.get("/about", (req, res) => {
     });
 });
 
+app.get("/projects", (req, res) => {
+    res.render("projects.hbs", {
+        title: "All Projects",
+        message: "These are the all of our projects that we have created."
+    });
+});
+
 app.get("/bad", (req, res) => {
     res.send({
         items: null,
